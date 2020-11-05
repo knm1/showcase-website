@@ -24,13 +24,59 @@
             "tsConfig": "tsconfig.app.json",
             "aot": true,
             "assets": [
-              "src/favicon.ico",
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "theme/scss/theme.scss",
+              "theme/fonts/Feather/feather.css",
+              "node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.css",
+              "node_modules/aos/dist/aos.css",
+              "node_modules/choices.js/public/assets/styles/choices.min.css",
+              "node_modules/flickity-fade/flickity-fade.css",
+              "node_modules/flickity/dist/flickity.min.css",
+              "node_modules/highlightjs/styles/vs2015.css",
+              "node_modules/jarallax/dist/jarallax.css",
+              "node_modules/quill/dist/quill.core.css",
+              "theme/css/theme.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
+              "node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js",
+              "node_modules/aos/dist/aos.js",
+              "node_modules/choices.js/public/assets/scripts/choices.min.js",
+              "node_modules/countup.js/dist/countUp.min.js",
+              "node_modules/dropzone/dist/min/dropzone.min.js",
+              "node_modules/flickity/dist/flickity.pkgd.min.js",
+              "node_modules/flickity-fade/flickity-fade.js",
+              "node_modules/highlightjs/highlight.pack.min.js",
+              "node_modules/imagesloaded/imagesloaded.pkgd.min.js",
+              "node_modules/isotope-layout/dist/isotope.pkgd.min.js",
+              "node_modules/jarallax/dist/jarallax.min.js",
+              "node_modules/jarallax/dist/jarallax-video.min.js",
+              "node_modules/jarallax/dist/jarallax-element.min.js",
+              "node_modules/quill/dist/quill.min.js",
+              "node_modules/smooth-scroll/dist/smooth-scroll.min.js",
+              "node_modules/typed.js/lib/typed.min.js",
+              "theme/js/polyfills.js",
+              "theme/js/aos.js",
+              "theme/js/choices.js",
+              "theme/js/countup.js",
+              "theme/js/dropdown.js",
+              "theme/js/dropzone.js",
+              "theme/js/fancybox.js",
+              "theme/js/highlight.js",
+              "theme/js/isotope.js",
+              "theme/js/map.js",
+              "theme/js/modal.js",
+              "theme/js/navbar.js",
+              "theme/js/popovers.js",
+              "theme/js/pricing.js",
+              "theme/js/quill.js",
+              "theme/js/smooth-scroll.js",
+              "theme/js/tooltips.js",
+              "theme/js/typed.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -123,6 +169,7 @@
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "showcase-website"
 }
