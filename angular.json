@@ -97,7 +97,7 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "2mb",
+                  "maximumWarning": "4mb",
                   "maximumError": "5mb"
                 },
                 {
@@ -166,6 +166,14 @@
             "production": {
               "devServerTarget": "showcase-website:serve:production"
             }
+          }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "baseHref": "https://knm1.github.io/showcase-website",
+            "name": "Knm",
+            "email": "team@knm.lu"
           }
         }
       }
