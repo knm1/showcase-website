@@ -7,6 +7,7 @@ import { ModalsComponent } from './partials/modals/modals.component';
 import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './partials/footer/footer.component';
 import { NavbarComponent } from './partials/navbar/navbar.component';
+import { ContactComponent } from './partials/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { NavbarComponent } from './partials/navbar/navbar.component';
     ModalsComponent,
     HomeComponent,
     FooterComponent,
-    NavbarComponent
+    NavbarComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
