@@ -74,7 +74,8 @@
               "theme/js/quill.js",
               "theme/js/smooth-scroll.js",
               "theme/js/tooltips.js",
-              "theme/js/typed.js"
+              "theme/js/typed.js",
+              "src/assets/js/jarallax.js"
             ]
           },
           "configurations": {
