@@ -2,7 +2,7 @@
   <div class="container">
 
     <!-- Brand -->
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" [routerLink]="['/company']">
       <img src="assets/img/brand_knm_blue.svg" class="navbar-brand-img" alt="Kars & MotorBike">
     </a>
 
@@ -24,14 +24,14 @@
       <!-- Navigation -->
       <ul class="navbar-nav ml-auto">
         <li class="nav-item dropdown">
-          <a class="nav-link" id="navbarCompany" href="#">
+          <a class="nav-link" id="navbarCompany" [routerLink]="['/company']">
             Company
           </a>
         </li>
 
 
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" id="navbarDocumentation" data-toggle="dropdown" href="#"
+          <a class="nav-link dropdown-toggle" id="navbarDocumentation" data-toggle="dropdown"
              aria-haspopup="true" aria-expanded="false">
             Projects
           </a>
