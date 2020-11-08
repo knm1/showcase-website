@@ -8,46 +8,46 @@ import {FooterComponent} from './partials/footer/footer.component';
 import {NavbarComponent} from './partials/navbar/navbar.component';
 import {ContactComponent} from './partials/contact/contact.component';
 import {ProjectsComponent} from './projects/projects.component';
-import {ProjectComponent} from './projects/project/project.component';
 import {NgxPageScrollModule} from 'ngx-page-scroll';
 import {NgcCookieConsentConfig, NgcCookieConsentModule} from 'ngx-cookieconsent';
+import { KarstrateComponent } from './projects/karstrate/karstrate.component';
 
 const cookieConfig: NgcCookieConsentConfig = {
-  'cookie': {
-    'domain': 'tinesoft.github.io'
+  cookie: {
+    domain: 'tinesoft.github.io'
   },
-  'position': 'bottom',
-  'theme': 'edgeless',
-  'palette': {
-    'popup': {
-      'background': '#161c2d',
-      'text': '#ffffff',
-      'link': '#ffffff'
+  position: 'bottom',
+  theme: 'edgeless',
+  palette: {
+    popup: {
+      background: '#161c2d',
+      text: '#ffffff',
+      link: '#ffffff'
     },
-    'button': {
-      'background': '#3259d0',
-      'text': '#000000',
-      'border': 'transparent'
+    button: {
+      background: '#3259d0',
+      text: '#000000',
+      border: 'transparent'
     }
   },
-  'type': 'info',
-  'content': {
-    'message': 'This website uses cookies to ensure you get the best experience on our website.',
-    'dismiss': 'Got it!',
-    'deny': 'Decline',
-    'link': 'Learn more',
-    'href': 'https://knm.lu',
-    'policy': 'Cookie Policy',
-    'header': 'Cookies used on the website!',
-    'allow': 'Allow cookies'
+  type: 'info',
+  content: {
+    message: 'This website uses cookies to ensure you get the best experience on our website.',
+    dismiss: 'Got it!',
+    deny: 'Decline',
+    link: 'Learn more',
+    href: 'https://knm.lu',
+    policy: 'Cookie Policy',
+    header: 'Cookies used on the website!',
+    allow: 'Allow cookies'
   }
 };
 
 
 const APP_ROUTE: Routes = [
   {path: 'company', component: HomeComponent},
-  {path: 'project/karstate', component: ProjectComponent},
-  {path: 'project/knm-platform', component: ProjectComponent},
+  {path: 'project/karstate', component: KarstrateComponent},
+  {path: 'project/platform', component: ProjectsComponent},
   {
     path: '',
     redirectTo: '/company',
@@ -67,7 +67,7 @@ const routerOptions: ExtraOptions = {
     NavbarComponent,
     ContactComponent,
     ProjectsComponent,
-    ProjectComponent
+    KarstrateComponent
   ],
   imports: [
     BrowserModule,
