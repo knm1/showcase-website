@@ -12,6 +12,7 @@ import {NgxPageScrollModule} from 'ngx-page-scroll';
 import {NgcCookieConsentConfig, NgcCookieConsentModule} from 'ngx-cookieconsent';
 import { KarstrateComponent } from './projects/karstrate/karstrate.component';
 import { PrivacyComponent } from './privacy/privacy.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const cookieConfig: NgcCookieConsentConfig = {
   cookie: {
@@ -50,6 +51,7 @@ const APP_ROUTE: Routes = [
   {path: 'privacy', component: PrivacyComponent},
   {path: 'project/karstate', component: KarstrateComponent},
   {path: 'project/platform', component: ProjectsComponent},
+  { path: '**', component: PageNotFoundComponent },  // Wildcard route for a 404 page
   {
     path: '',
     redirectTo: '/company',
@@ -70,7 +72,8 @@ const routerOptions: ExtraOptions = {
     ContactComponent,
     ProjectsComponent,
     KarstrateComponent,
-    PrivacyComponent
+    PrivacyComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
