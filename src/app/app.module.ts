@@ -51,16 +51,17 @@ const APP_ROUTE: Routes = [
   {path: 'privacy', component: PrivacyComponent},
   {path: 'project/karstate', component: KarstrateComponent},
   {path: 'project/platform', component: ProjectsComponent},
-  { path: '**', component: PageNotFoundComponent },  // Wildcard route for a 404 page
   {
     path: '',
-    redirectTo: '/company',
+    redirectTo: 'company',
     pathMatch: 'full'
-  }
+  },
+  { path: '**', component: PageNotFoundComponent },  // Wildcard route for a 404 page
 ];
 
 const routerOptions: ExtraOptions = {
   anchorScrolling: 'enabled',
+  scrollPositionRestoration: 'enabled'
 };
 
 @NgModule({
