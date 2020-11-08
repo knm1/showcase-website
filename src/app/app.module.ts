@@ -11,6 +11,7 @@ import {ProjectsComponent} from './projects/projects.component';
 import {NgxPageScrollModule} from 'ngx-page-scroll';
 import {NgcCookieConsentConfig, NgcCookieConsentModule} from 'ngx-cookieconsent';
 import { KarstrateComponent } from './projects/karstrate/karstrate.component';
+import { PrivacyComponent } from './privacy/privacy.component';
 
 const cookieConfig: NgcCookieConsentConfig = {
   cookie: {
@@ -36,7 +37,7 @@ const cookieConfig: NgcCookieConsentConfig = {
     dismiss: 'Got it!',
     deny: 'Decline',
     link: 'Learn more',
-    href: 'https://knm.lu',
+    href: 'https://knm.lu/privacy',
     policy: 'Cookie Policy',
     header: 'Cookies used on the website!',
     allow: 'Allow cookies'
@@ -46,6 +47,7 @@ const cookieConfig: NgcCookieConsentConfig = {
 
 const APP_ROUTE: Routes = [
   {path: 'company', component: HomeComponent},
+  {path: 'privacy', component: PrivacyComponent},
   {path: 'project/karstate', component: KarstrateComponent},
   {path: 'project/platform', component: ProjectsComponent},
   {
@@ -67,7 +69,8 @@ const routerOptions: ExtraOptions = {
     NavbarComponent,
     ContactComponent,
     ProjectsComponent,
-    KarstrateComponent
+    KarstrateComponent,
+    PrivacyComponent
   ],
   imports: [
     BrowserModule,
