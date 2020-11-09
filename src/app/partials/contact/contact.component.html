@@ -93,7 +93,7 @@
       <div class="col-12 col-md-12 col-lg-10">
 
         <!-- Form -->
-        <form>
+        <form [formGroup]='form' (ngSubmit)="submit()">
           <div class="row">
             <div class="col-12 col-md-6">
               <div class="form-group mb-5">
@@ -104,7 +104,12 @@
                 </label>
 
                 <!-- Input -->
-                <input type="text" class="form-control" id="contactName" placeholder="Full name">
+                <input
+                  formControlName="contactName"
+                  type="text"
+                  class="form-control"
+                  id="contactName"
+                  placeholder="Full name">
 
               </div>
             </div>
@@ -117,7 +122,8 @@
                 </label>
 
                 <!-- Input -->
-                <input type="email" class="form-control" id="contactEmail" placeholder="contact@knm.lu">
+                <input formControlName="email" type="email" class="form-control" id="contactEmail"
+                       placeholder="your@email.com" name="email">
 
               </div>
             </div>
@@ -132,17 +138,25 @@
                 </label>
 
                 <!-- Input -->
-                <textarea class="form-control" id="contactMessage" rows="5"
-                          placeholder="Tell us what we can help you with!"></textarea>
+                <textarea formControlName="message" class="form-control" id="contactMessage" rows="5"
+                          placeholder="Tell us what we can help you with!" name="message"></textarea>
 
               </div>
             </div>
           </div> <!-- / .row -->
+          <div class="row justify-content-center" *ngIf="showSuccessMsg">
+            <div class="col-xs-12">
+              <p class="alert alert-success">
+                <strong>Your message has been sent successfully,</strong> we will get back in touch with you soon.
+              </p>
+            </div>
+          </div>
           <div class="row justify-content-center">
+
             <div class="col-auto">
 
               <!-- Submit -->
-              <button type="submit" class="btn btn-primary lift">
+              <button type="submit" value="" Send class="btn btn-primary lift">
                 Send message
               </button>
 

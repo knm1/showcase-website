@@ -1,6 +1,8 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {ExtraOptions, RouterModule, Routes} from '@angular/router';
+import {HttpClientModule} from '@angular/common/http';
 
 import {AppComponent} from './app.component';
 import {HomeComponent} from './home/home.component';
@@ -77,7 +79,10 @@ const routerOptions: ExtraOptions = {
     PageNotFoundComponent
   ],
   imports: [
+    FormsModule,
+    ReactiveFormsModule,
     BrowserModule,
+    HttpClientModule,
     RouterModule.forRoot(APP_ROUTE, routerOptions),
     NgcCookieConsentModule.forRoot(cookieConfig),
     NgxPageScrollModule
