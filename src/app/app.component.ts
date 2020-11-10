@@ -17,9 +17,10 @@ export class AppComponent implements OnInit, OnDestroy {
   private revokeChoiceSubscription: Subscription;
   private noCookieLawSubscription: Subscription;
 
-  constructor(private ccService: NgcCookieConsentService){}
+  constructor(private ccService: NgcCookieConsentService) {
+  }
 
-  ngOnInit(): void  {
+  ngOnInit(): void {
     // subscribe to cookieconsent observables to react to main events
     this.popupOpenSubscription = this.ccService.popupOpen$.subscribe(
       () => {
@@ -50,7 +51,10 @@ export class AppComponent implements OnInit, OnDestroy {
       (event: NgcNoCookieLawEvent) => {
         // you can use this.ccService.getConfig() to do stuff...
       });
+
   }
+
+
 
   ngOnDestroy(): void {
     // unsubscribe to cookieconsent observables to prevent memory leaks
@@ -61,4 +65,5 @@ export class AppComponent implements OnInit, OnDestroy {
     this.revokeChoiceSubscription.unsubscribe();
     this.noCookieLawSubscription.unsubscribe();
   }
+
 }

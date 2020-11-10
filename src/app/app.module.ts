@@ -15,6 +15,8 @@ import {NgcCookieConsentConfig, NgcCookieConsentModule} from 'ngx-cookieconsent'
 import { KarstrateComponent } from './projects/karstrate/karstrate.component';
 import { PrivacyComponent } from './privacy/privacy.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { ParallaxDirective } from './parallax.directive';
+
 
 const cookieConfig: NgcCookieConsentConfig = {
   cookie: {
@@ -76,7 +78,8 @@ const routerOptions: ExtraOptions = {
     ProjectsComponent,
     KarstrateComponent,
     PrivacyComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    ParallaxDirective
   ],
   imports: [
     FormsModule,
